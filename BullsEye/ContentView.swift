@@ -13,7 +13,7 @@ struct ContentView: View {
             Text("🎯🎯🎯Put the bullseye as close as you can")
                 .bold()
                 .kerning(2.0)
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.center)    // only works to view, so it should be after bold() and kerning(2.0) method because those can only be applied to textview
                 .lineSpacing(0.4)
                 .font(.footnote)
             HStack {
@@ -26,11 +26,11 @@ struct ContentView: View {
                     .bold()
                     }
             Text("89")
-                .kerning(-1.0)
+                .kerning(-1.0)  // negative kerning value makes the letter closer to the view border
                 .bold()
                 .fontWeight(.black)
                 .font(.largeTitle)
-            Button(action: {}) {
+            Button(action: {}) {    // Add action to the button
                 Text("Hit me")
             }
         }
